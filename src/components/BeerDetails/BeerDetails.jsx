@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { useLocation, useParams } from 'react-router-dom';
 import useStore from '../../api/Store';
-import { MovieLink, WrapTitle, WrapDescription } from './BeerDetails.style';
+import { BeerLink, WrapTitle, WrapDescription, Wrapper } from './BeerDetails.style';
 
 const BeerDetails = () => {
 
@@ -24,8 +24,8 @@ const BeerDetails = () => {
   const { name, image_url, abv, tagline, brewers_tips, contributed_by, first_brewed } = beer[0];
 
   return (
-    <div>
-      <MovieLink to={refLocation.current ?? '/'}>Go back</MovieLink>
+    <Wrapper>
+      <BeerLink to={refLocation.current ?? '/'}>Go back</BeerLink>
       <WrapTitle>
         <img src={image_url} alt={name} />
         <WrapDescription>
@@ -39,7 +39,7 @@ const BeerDetails = () => {
           <p>{contributed_by}</p>
         </WrapDescription>
       </WrapTitle>
-    </div>
+    </Wrapper>
   );
 };
 

@@ -14,7 +14,6 @@ import {
   ItemAbout,
   ItemImg,
   Btn,
-  RelDiv,
 } from './GalleryBeer.styled';
 
 const PER_PAGE_MAX = 25;
@@ -26,7 +25,6 @@ const BeerList = ( searchQuery ) => {
   const [perPage, setPerPage] = useState(PER_PAGE_INIT)
   const { beers, getBeers, deleteBeer } = useStore();
   const { visibleButtonId, toggleButtonVisibility } = useStore();
-  const [cards, setCards] = useState([]);
 
   // console.log(beers);
 

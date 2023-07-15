@@ -1,18 +1,33 @@
 import styled from 'styled-components';
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-export const MovieLink = styled(Link)`
-  width: 80px;
-  color:darkseagreen;
-  text-align: center;
-  padding: 5px;
-  background: rgba(129, 129, 129, 0.119);
+export const Wrapper = styled.div`
+  position: relative;
+  display: flex;
+`
 
-
-  border: 1px solid black;
-
+export const BeerLink = styled(Link)`
   position: absolute;
-  left: 20px;
+  right: 20px;
+  margin: 0 auto;
+  padding: 8px 16px;
+  border-radius: 4px;
+  background-color: #3f51b5;
+  text-align: center;
+  display: inline-block;
+  color: #fff;
+  border: 0;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 24px;
+  font-style: normal;
+  font-weight: 500;
+  &:hover {
+    background-color: #799be6;
+    color: black;
+  };
 
 `
 
