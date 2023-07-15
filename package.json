@@ -2,7 +2,7 @@
   "name": "beers",
   "version": "0.1.0",
   "private": true,
-  "homepage": "",
+  "homepage": "https://Vildanov-Roman.github.io/test-beer-zus/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.3",
     "@testing-library/react": "^12.1.4",
