@@ -1,16 +1,26 @@
+import { lazy, Suspense } from 'react';
+import { Route, Routes } from 'react-router-dom';
+
+import { SearchBar } from './Search/searchBar';
+
+const BeerList = lazy(() => import('./Gallery/GalleryBeer'));
+const BeerDetails = lazy(() => import('./BeerDetails/BeerDetails'))
+
 export const App = () => {
+  // console.log(fetchBeers());
+  const onSubmit = () => {
+    console.log('Hello');
+  };
+
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+    <>
+    <SearchBar onSubmit={onSubmit} />
+      <Suspense >
+        <Routes>
+          <Route path="/beers" element={<BeerList/>} />
+          <Route path="/beers/:beerId" element={<BeerDetails/>} />
+        </Routes>
+      </Suspense>
+    </>
   );
 };
