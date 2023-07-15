@@ -34,11 +34,7 @@ export const About = styled.p`
 margin-bottom: 10px;
 `;
 
-export const Pier = styled.p`
-  font-family: "Rage Italic";
-`;
-
-export const MovieLink = styled(Link)`
+export const BeerLink = styled(Link)`
   display: flex;
   align-items: center;
   gap: 10px;

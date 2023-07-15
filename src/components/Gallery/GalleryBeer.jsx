@@ -9,8 +9,7 @@ import {
   Img,
   ImgBox,
   About,
-  Pier,
-  MovieLink,
+  BeerLink,
   ItemAbout,
   ItemImg,
   Btn,
@@ -26,13 +25,9 @@ const BeerList = ( searchQuery ) => {
   const { beers, getBeers, deleteBeer } = useStore();
   const { visibleButtonId, toggleButtonVisibility } = useStore();
 
-  // console.log(beers);
-
   useEffect(() => {
      getBeers(page, perPage);
   }, [page, perPage]);
-
-
 
   const loadMore = () => {
     setPage(page + 1);
@@ -50,9 +45,7 @@ const BeerList = ( searchQuery ) => {
       {beers.map(beer => (
         <div>
             <Item key={beer.id}  onContextMenu={handleContextMenu(beer.id)}>
-
-
-              <MovieLink  to={`/beers/${beer.id}`} state={{ location }}>
+              <BeerLink  to={`/beers/${beer.id}`} state={{ location }}>
                 <div>
                   <ItemImg>
                     <ImgBox>
@@ -66,11 +59,11 @@ const BeerList = ( searchQuery ) => {
                     <About>{beer.description}</About>
                     <About>{beer.brewers_tips}</About>
                     <div>
-                      <Pier>{beer.food_pairing}</Pier>
+                      <span>{beer.food_pairing}</span>
                     </div>
                   </ItemAbout>
                 </div>
-              </MovieLink>
+              </BeerLink>
               <div>
                 {visibleButtonId.includes(beer.id) && <Btn onClick={() => deleteBeer(beer.id)}>Delete</Btn>}
               </div>

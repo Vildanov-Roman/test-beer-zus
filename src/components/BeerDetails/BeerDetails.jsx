@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { useLocation, useParams } from 'react-router-dom';
 import useStore from '../../api/Store';
-import { BeerLink, WrapTitle, WrapDescription, Wrapper } from './BeerDetails.style';
+import { BackLink, WrapTitle, WrapDescription, Wrapper } from './BeerDetails.style';
 
 const BeerDetails = () => {
 
@@ -25,7 +25,7 @@ const BeerDetails = () => {
 
   return (
     <Wrapper>
-      <BeerLink to={refLocation.current ?? '/'}>Go back</BeerLink>
+      <BackLink to={refLocation.current ?? '/'}>Go back</BackLink>
       <WrapTitle>
         <img src={image_url} alt={name} />
         <WrapDescription>
