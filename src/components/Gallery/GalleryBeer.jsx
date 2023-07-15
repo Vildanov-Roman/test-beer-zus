@@ -27,7 +27,7 @@ const BeerList = ( searchQuery ) => {
 
   useEffect(() => {
      getBeers(page, perPage);
-  }, [page, perPage]);
+  }, [page, perPage, getBeers]);
 
   const loadMore = () => {
     setPage(page + 1);
