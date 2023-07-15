@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
   display: flex;
 `
 
-export const BeerLink = styled(Link)`
+export const BackLink = styled(Link)`
   position: absolute;
   right: 20px;
   margin: 0 auto;
