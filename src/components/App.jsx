@@ -6,10 +6,6 @@ const BeerList = lazy(() => import('./Gallery/GalleryBeer'));
 const BeerDetails = lazy(() => import('./BeerDetails/BeerDetails'))
 
 export const App = () => {
-  // console.log(fetchBeers());
-  const onSubmit = () => {
-    console.log('Hello');
-  };
 
   return (
     <>

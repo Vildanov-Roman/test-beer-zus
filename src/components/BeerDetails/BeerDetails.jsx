@@ -14,7 +14,7 @@ const BeerDetails = () => {
 
   useEffect(() => {
     getBeerById(beerId);
-  }, [beerId]);
+  }, [beerId, getBeerById]);
 
   if (!beer) {
     return <p>404 Not Found</p>;
