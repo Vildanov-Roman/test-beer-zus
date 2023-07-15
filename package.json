@@ -2,13 +2,14 @@
   "name": "beers",
   "version": "0.1.0",
   "private": true,
-  "homepage": "",
+  "homepage": "https://github.com/Vildanov-Roman/test-beer-zus.git",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.3",
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.4.0",
     "formik": "^2.4.2",
+    "gh-pages": "^5.0.0",
     "notiflix": "^3.2.6",
     "prop-types": "^15.8.1",
     "react": "^18.1.0",
@@ -25,7 +26,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint:js": "eslint src/**/*.{js,jsx}"
+    "lint:js": "eslint src/**/*.{js,jsx}",
+    "deploy": "gh-pages -d build",
   },
   "eslintConfig": {
     "extends": [
