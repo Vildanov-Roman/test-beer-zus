@@ -43,8 +43,8 @@ const BeerList = ( searchQuery ) => {
     <div>
     <ul>
       {beers.map(beer => (
-        <div>
-            <Item key={beer.id}  onContextMenu={handleContextMenu(beer.id)}>
+        <div key={beer.id}>
+            <Item  onContextMenu={handleContextMenu(beer.id)}>
               <BeerLink  to={`/beers/${beer.id}`} state={{ location }}>
                 <div>
                   <ItemImg>
